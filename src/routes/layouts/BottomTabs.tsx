@@ -40,7 +40,7 @@ export default function BottomTabs() {
         />
         <Tab.Screen
           name={'Notification'}
-          component={Private.Home}
+          component={Private.Notification}
           options={{
             tabBarIcon: ({color, size}) => (
               <Ionicons name="notifications" color={color} size={21} />

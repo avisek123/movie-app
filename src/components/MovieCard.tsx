@@ -19,13 +19,7 @@ const MovieCard = ({item}: {item: MovieType}) => {
         borderRadius={10}>
         <Row space={4}>
           <Image
-            style={{
-              width: 150,
-              height: height / 4.3,
-              resizeMode: 'contain',
-              borderTopLeftRadius: 10,
-              borderBottomLeftRadius: 10,
-            }}
+            style={{...styles.img, height: height / 4.3}}
             source={{
               uri: item?.Poster,
             }}
@@ -104,4 +98,11 @@ const MovieCard = ({item}: {item: MovieType}) => {
 
 export default MovieCard;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  img: {
+    width: 150,
+    resizeMode: 'contain',
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
+  },
+});
