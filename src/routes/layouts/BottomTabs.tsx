@@ -50,7 +50,7 @@ export default function BottomTabs() {
         />
         <Tab.Screen
           name={'Account'}
-          component={Private.Home}
+          component={Private.Account}
           options={{
             tabBarIcon: ({color, size}) => (
               <Ionicons name="person" color={color} size={21} />

@@ -9,7 +9,12 @@ import {AppContextProvider} from 'contexts';
 const App = () => {
   return (
     <NavigationContainer>
-      <NativeBaseProvider>
+      <NativeBaseProvider
+        config={{
+          dependencies: {
+            'linear-gradient': require('react-native-linear-gradient').default,
+          },
+        }}>
         <AppContextProvider>
           <Router />
         </AppContextProvider>

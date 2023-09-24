@@ -7,7 +7,7 @@ const Stack = createNativeStackNavigator<PublicStackParams>();
 const PublicRoutes = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Login" component={Public.Login} />
+      <Stack.Screen name="Login" component={Public.Auth} />
     </Stack.Navigator>
   );
 };
