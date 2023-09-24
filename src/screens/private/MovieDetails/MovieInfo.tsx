@@ -2,6 +2,7 @@ import {StyleSheet} from 'react-native';
 import React from 'react';
 import {Box, Image, Row, Text, VStack} from 'native-base';
 import {Rating} from 'react-native-ratings';
+import {COLORS} from 'styles';
 
 const MovieInfo = ({movieDetails}: any) => {
   const genreArray = movieDetails?.Genre?.split(', ');
@@ -32,32 +33,32 @@ const MovieInfo = ({movieDetails}: any) => {
                   borderWidth={1}
                   justifyContent={'center'}
                   alignItems={'center'}
-                  borderColor={'#95a0a9'}>
-                  <Text color={'#95a0a9'} fontSize={10}>
+                  borderColor={COLORS.secondary}>
+                  <Text color={COLORS.secondary} fontSize={10}>
                     {ele}
                   </Text>
                 </Box>
               ))}
             </Row>
             <Row mt={3}>
-              <Text fontSize={12} color={'#95a0a9'}>
+              <Text fontSize={12} color={COLORS.secondary}>
                 {movieDetails?.Language}
               </Text>
               <Box
                 alignSelf={'center'}
                 borderRadius={20}
-                backgroundColor={'#95a0a9'}
+                backgroundColor={COLORS.secondary}
                 height={1}
                 width={1}
                 ml={1}
               />
 
-              <Text ml={1} fontSize={12} color={'#95a0a9'}>
+              <Text ml={1} fontSize={12} color={COLORS.secondary}>
                 {movieDetails?.Year}
               </Text>
             </Row>
             <Row mt={1.5}>
-              <Text fontSize={12} color={'#95a0a9'}>
+              <Text fontSize={12} color={COLORS.secondary}>
                 {Math.floor(parseFloat(movieDetails?.Runtime) / 60)} hr {''}
                 {''}
                 {parseFloat(movieDetails?.Runtime) % 60} min
@@ -65,12 +66,12 @@ const MovieInfo = ({movieDetails}: any) => {
               <Box
                 alignSelf={'center'}
                 borderRadius={20}
-                backgroundColor={'#95a0a9'}
+                backgroundColor={COLORS.secondary}
                 height={1}
                 width={1}
                 ml={1}
               />
-              <Text ml={1} fontSize={12} color={'#95a0a9'}>
+              <Text ml={1} fontSize={12} color={COLORS.secondary}>
                 {movieDetails?.Type}
               </Text>
             </Row>
@@ -81,7 +82,7 @@ const MovieInfo = ({movieDetails}: any) => {
                 startingValue={movieDetails?.imdbRating / 2}
                 readonly
                 ratingColor={'orange'}
-                tintColor={'#19191B'}
+                tintColor={COLORS.black_fade}
                 ratingBackgroundColor={'lightgrey'}
                 imageSize={15}
                 fractions="{1}"

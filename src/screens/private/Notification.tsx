@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native';
 import React from 'react';
 import {Box, Center, Text} from 'native-base';
+import {COLORS} from 'styles';
 
 const Notification = () => {
   return (
@@ -9,7 +10,7 @@ const Notification = () => {
         Notification
       </Text>
       <Center h="2/3">
-        <Text color="#95a0a9">No new notifications</Text>
+        <Text color={COLORS.secondary}>No new notifications</Text>
       </Center>
     </Box>
   );

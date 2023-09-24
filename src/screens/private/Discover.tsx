@@ -1,7 +1,7 @@
 import {Image, ListRenderItem, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {Box, Row, Text} from 'native-base';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+
 import {FlatList} from 'react-native';
 import {GENRE} from '../../constants';
 import {MovieGenre} from 'types';

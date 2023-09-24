@@ -6,6 +6,7 @@ import {MovieType} from 'types';
 import {Rating} from 'react-native-ratings';
 import {useNavigation} from '@react-navigation/native';
 import {PrivateNavigationProps} from 'types';
+import {COLORS} from 'styles';
 
 const MovieCard = ({item}: {item: MovieType}) => {
   const {width, height} = useWindowDimensions();
@@ -23,7 +24,7 @@ const MovieCard = ({item}: {item: MovieType}) => {
         h={'48'}
         w={width - 28}
         mt={15}
-        backgroundColor={'#19191B'}
+        backgroundColor={COLORS.black_fade}
         borderRadius={10}>
         <Row space={4}>
           <Image
@@ -49,31 +50,31 @@ const MovieCard = ({item}: {item: MovieType}) => {
                   borderWidth={1}
                   justifyContent={'center'}
                   alignItems={'center'}
-                  borderColor={'#95a0a9'}>
-                  <Text color={'#95a0a9'} fontSize={10}>
+                  borderColor={COLORS.secondary}>
+                  <Text color={COLORS.secondary} fontSize={10}>
                     {ele}
                   </Text>
                 </Box>
               ))}
             </Row>
             <Row mt={3}>
-              <Text fontSize={12} color={'#95a0a9'}>
+              <Text fontSize={12} color={COLORS.secondary}>
                 {item?.Language}
               </Text>
               <Box
                 alignSelf={'center'}
                 borderRadius={20}
-                backgroundColor={'#95a0a9'}
+                backgroundColor={COLORS.secondary}
                 height={1}
                 width={1}
                 ml={1}
               />
 
-              <Text ml={1} fontSize={12} color={'#95a0a9'}>
+              <Text ml={1} fontSize={12} color={COLORS.secondary}>
                 {item?.Year}
               </Text>
             </Row>
-            <Text mt={1.5} fontSize={12} color={'#95a0a9'}>
+            <Text mt={1.5} fontSize={12} color={COLORS.secondary}>
               {Math.floor(parseFloat(item?.Runtime) / 60)} hr {''}
               {''}
               {parseFloat(item?.Runtime) % 60} min
@@ -85,7 +86,7 @@ const MovieCard = ({item}: {item: MovieType}) => {
                 startingValue={item?.imdbRating / 2}
                 readonly
                 ratingColor={'orange'}
-                tintColor={'#19191B'}
+                tintColor={COLORS.black_fade}
                 ratingBackgroundColor={'lightgrey'}
                 imageSize={15}
                 fractions="{1}"
@@ -94,7 +95,11 @@ const MovieCard = ({item}: {item: MovieType}) => {
                 {item?.imdbRating}
               </Text>
             </Row>
-            <Text fontSize={12} width={200} color={'#95a0a9'} numberOfLines={2}>
+            <Text
+              fontSize={12}
+              width={200}
+              color={COLORS.secondary}
+              numberOfLines={2}>
               {item?.Plot}
             </Text>
           </VStack>

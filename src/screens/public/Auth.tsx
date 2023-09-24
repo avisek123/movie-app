@@ -11,6 +11,7 @@ import {DimensionHeight} from 'utils';
 import LinearGradient from 'react-native-linear-gradient';
 import {StatusBar} from 'react-native';
 import {AuthModal} from 'components';
+import {COLORS} from 'styles';
 
 const Login = () => {
   const [modalOpen, setModalOpen] = React.useState(false);
@@ -54,10 +55,10 @@ const Login = () => {
             {' '}
             at your fingertips
           </Text>
-          <Text mt={2} fontSize={12} color={'#95a0a9'}>
+          <Text mt={2} fontSize={12} color={COLORS.secondary}>
             Unlash a world of limitless entaintainment,
           </Text>
-          <Text fontSize={12} color={'#95a0a9'}>
+          <Text fontSize={12} color={COLORS.secondary}>
             watch everything and everywhere
           </Text>
           <TouchableOpacity

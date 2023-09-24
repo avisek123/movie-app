@@ -14,7 +14,7 @@ export default function BottomTabs() {
         screenOptions={{
           headerShown: false,
           tabBarHideOnKeyboard: true,
-          tabBarActiveTintColor: '#ff0335',
+          tabBarActiveTintColor: COLORS.primary,
           tabBarStyle: {backgroundColor: '#000', borderTopWidth: 0},
         }}>
         <Tab.Screen

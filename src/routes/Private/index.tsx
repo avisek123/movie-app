@@ -19,6 +19,13 @@ const PrivateRoutes = () => {
         name="MovieDetails"
         component={Private.MovieDetails}
       />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+        }}
+        name="Genre"
+        component={Private.Genre}
+      />
     </Stack.Navigator>
   );
 };

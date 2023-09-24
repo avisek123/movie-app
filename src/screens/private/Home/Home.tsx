@@ -1,19 +1,12 @@
-import {
-  FlatList,
-  Image,
-  ListRenderItem,
-  StyleSheet,
-  TextInput,
-  View,
-  useWindowDimensions,
-} from 'react-native';
+import {FlatList, ListRenderItem, StyleSheet, TextInput} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {Avatar, Box, Center, Row, Text} from 'native-base';
+import {Box, Center} from 'native-base';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from './Header';
 import {MOVIES} from '../../../constants';
 import {Empty, MovieCard} from 'components';
 import {MovieType} from 'types';
+import {COLORS} from 'styles';
 
 const Home = () => {
   const [searchTxt, setSearchTxt] = useState('');
@@ -45,7 +38,7 @@ const Home = () => {
           mt={5}
           borderRadius={10}
           flexDirection={'row'}
-          backgroundColor={'#19191B'}
+          backgroundColor={COLORS.black_fade}
           width={'100%'}
           alignItems={'center'}
           h={10}>
@@ -79,7 +72,7 @@ const Home = () => {
     </Box>
   );
 };
-// f22f28
+
 export default Home;
 
 const styles = StyleSheet.create({
@@ -87,24 +80,3 @@ const styles = StyleSheet.create({
     paddingBottom: 200,
   },
 });
-{
-  /* <Box
-h={'48'}
-w={width - 28}
-backgroundColor={'#19191B'}
-borderRadius={10}>
-<Image
-  style={{
-    width: 150,
-    height: height / 4.3,
-
-    resizeMode: 'contain',
-    borderTopLeftRadius: 10,
-    borderBottomLeftRadius: 10,
-  }}
-  source={{
-    uri: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSmGggtpJ4TX3aN3PUaVWUgNODHespRPvKYAyhGUAZSqSOmPiEm',
-  }}
-/>
-</Box> */
-}

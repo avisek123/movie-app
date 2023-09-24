@@ -8,6 +8,9 @@ export type PublicStackParams = {
 export type PrivateStackParams = {
   BottomTabs: undefined;
   Home: undefined;
+  Genre: {
+    type: string;
+  };
   MovieDetails: {
     imdbID: string;
   };

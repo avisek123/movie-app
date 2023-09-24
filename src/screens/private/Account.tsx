@@ -100,7 +100,7 @@ const Account = () => {
                 Welcome
               </Text>
               <Text fontSize={15} color={'#fff'} fontWeight={'bold'}>
-                {user?.name || ''}
+                {user?.name || user?.email}
               </Text>
             </VStack>
             <Icon

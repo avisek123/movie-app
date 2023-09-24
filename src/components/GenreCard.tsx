@@ -1,12 +1,22 @@
 import {StyleSheet} from 'react-native';
 import React from 'react';
-import {MovieGenre} from 'types';
-import {Box, Image, Row, Text} from 'native-base';
+import {MovieGenre, PrivateNavigationProps} from 'types';
+import {Box, Image, Pressable, Row, Text} from 'native-base';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {useNavigation} from '@react-navigation/native';
 const GenreCard = ({item, index}: {item: MovieGenre; index: number}) => {
+  const {navigate} = useNavigation<PrivateNavigationProps>();
   return (
     <>
-      <Box mt={index === 0 ? 10 : 5} ml={5} mr={5}>
+      <Pressable
+        onPress={() => {
+          navigate('Genre', {
+            type: item?.title,
+          });
+        }}
+        mt={index === 0 ? 10 : 5}
+        ml={5}
+        mr={5}>
         <Row space={5}>
           <Image
             alt=""
@@ -32,7 +42,7 @@ const GenreCard = ({item, index}: {item: MovieGenre; index: number}) => {
             size={21}
           />
         </Row>
-      </Box>
+      </Pressable>
     </>
   );
 };

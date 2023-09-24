@@ -8,6 +8,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {MOVIES} from '../../../constants';
 import MovieInfo from './MovieInfo';
+import {COLORS} from 'styles';
 const data = [
   {
     id: 1,
@@ -94,7 +95,7 @@ const MovieDetails = () => {
                   mt={4}
                   size="md"
                 />
-                <Text fontSize={12} mt={2} color={'#95a0a9'}>
+                <Text fontSize={12} mt={2} color={COLORS.secondary}>
                   {item?.title}
                 </Text>
               </VStack>
@@ -102,22 +103,31 @@ const MovieDetails = () => {
           </Row>
         </Center>
 
-        <Box backgroundColor={'#19191B'} mt={2} height={0.5} width={'100%'} />
+        <Box
+          backgroundColor={COLORS.black_fade}
+          mt={2}
+          height={0.5}
+          width={'100%'}
+        />
         <Box ml={2} mr={4} mt={4}>
           <Text color="#fff" fontSize={20}>
             {'Overview'}
           </Text>
-          <Text mt={1} textAlign={'justify'} color={'#95a0a9'} fontSize={12}>
+          <Text
+            mt={1}
+            textAlign={'justify'}
+            color={COLORS.secondary}
+            fontSize={12}>
             {movieDetails?.Plot}
           </Text>
           <Box mt={2}>
-            <Text color={'#95a0a9'} fontSize={12}>
+            <Text color={COLORS.secondary} fontSize={12}>
               Director - {movieDetails?.Director}
             </Text>
-            <Text color={'#95a0a9'} fontSize={12}>
+            <Text color={COLORS.secondary} fontSize={12}>
               Stars - {movieDetails?.Actors}
             </Text>
-            <Text color={'#95a0a9'} fontSize={12}>
+            <Text color={COLORS.secondary} fontSize={12}>
               Country - {movieDetails?.Country}
             </Text>
           </Box>
@@ -131,7 +141,7 @@ export default MovieDetails;
 
 const styles = StyleSheet.create({
   btn: {
-    backgroundColor: '#ff0335',
+    backgroundColor: COLORS.primary,
     width: '95%',
     height: 40,
 

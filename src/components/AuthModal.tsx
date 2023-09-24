@@ -4,6 +4,7 @@ import React from 'react';
 import {Alert, TouchableOpacity} from 'react-native';
 import {Image, Modal, Pressable, SafeAreaView, StyleSheet} from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {COLORS} from 'styles';
 
 type Props = {
   visible: boolean;
@@ -92,7 +93,7 @@ export default ({onClose, visible}: Props) => {
                 style={{
                   marginTop: 15,
                 }}>
-                <Text fontSize={16} color="#ff0335">
+                <Text fontSize={16} color={COLORS.primary}>
                   {!isCreateAccount ? 'Create Account' : 'Sign In'}
                 </Text>
               </TouchableOpacity>
