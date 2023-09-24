@@ -2,13 +2,9 @@ export default [
   {
     id: 1,
     title: 'Action',
-    img: 'https://plus.unsplash.com/premium_photo-1683134559962-1f316af881d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWN0aW9uJTIwZ3VufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
+    img: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSmGggtpJ4TX3aN3PUaVWUgNODHespRPvKYAyhGUAZSqSOmPiEm',
   },
-  {
-    id: 2,
-    title: 'Adventure',
-    img: 'https://hips.hearstapps.com/hmg-prod/images/raya-and-the-last-dragon-social-1-1621890889.jpeg',
-  },
+
   {
     id: 3,
     title: 'Fantasy',
@@ -48,5 +44,10 @@ export default [
     id: 10,
     title: 'Thriller',
     img: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS-B-qftauijOFrBQ7OCsvc_j1QpNijR02RYckNMOL6JrvQLV5S',
+  },
+  {
+    id: 2,
+    title: 'Adventure',
+    img: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQA_-tL18_rj9zEcjN6n41NEaJm-kRNF9UeOtvksZ4z_OW6jRA9',
   },
 ];
