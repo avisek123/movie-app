@@ -124,7 +124,7 @@ const Account = () => {
           {data?.map((item, index) => (
             <Pressable
               onPress={() => {
-                Alert.alert('Hello', 'This features is under the process.');
+                Alert.alert('Hello', 'This features is work in process.');
               }}
               mt={index === 0 ? -3 : 6}
               key={item?.id}>
