@@ -5,6 +5,7 @@ import {Alert, TouchableOpacity} from 'react-native';
 import {Image, Modal, Pressable, SafeAreaView, StyleSheet} from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {COLORS} from 'styles';
+import {isValidEmail} from 'utils';
 
 type Props = {
   visible: boolean;
@@ -22,6 +23,8 @@ export default ({onClose, visible}: Props) => {
     if (!name && isCreateAccount)
       return Alert.alert('Error', 'Please enter your name');
     if (!email) return Alert.alert('Error', 'Please enter your email');
+    if (!isValidEmail(email))
+      return Alert.alert('Error', 'Please enter a valid email');
     setUser({
       name,
       email,
