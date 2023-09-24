@@ -1,4 +1,4 @@
-import {ListRenderItem, StyleSheet, View} from 'react-native';
+import {ListRenderItem, StyleSheet} from 'react-native';
 import React, {useEffect} from 'react';
 import {Box, Center, Pressable, Row, Text} from 'native-base';
 import {useNavigation, useRoute} from '@react-navigation/native';

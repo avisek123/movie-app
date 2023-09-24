@@ -1,4 +1,4 @@
-import {Alert, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {Alert, StyleSheet, TouchableOpacity} from 'react-native';
 import React, {useEffect} from 'react';
 import {Box, Center, Icon, Pressable, Row, Text, VStack} from 'native-base';
 import {useNavigation, useRoute} from '@react-navigation/native';
