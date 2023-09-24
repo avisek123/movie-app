@@ -1,17 +1,25 @@
 import {StyleSheet, useWindowDimensions} from 'react-native';
 import React from 'react';
-import {Box, Row, Text, VStack} from 'native-base';
+import {Box, Pressable, Row, Text, VStack} from 'native-base';
 import {Image} from 'react-native';
 import {MovieType} from 'types';
 import {Rating} from 'react-native-ratings';
+import {useNavigation} from '@react-navigation/native';
+import {PrivateNavigationProps} from 'types';
 
 const MovieCard = ({item}: {item: MovieType}) => {
   const {width, height} = useWindowDimensions();
+  const {navigate} = useNavigation<PrivateNavigationProps>();
   const genreArray = item?.Genre?.split(', ');
 
   return (
     <>
-      <Box
+      <Pressable
+        onPress={() =>
+          navigate('MovieDetails', {
+            imdbID: item?.imdbID,
+          })
+        }
         h={'48'}
         w={width - 28}
         mt={15}
@@ -91,7 +99,7 @@ const MovieCard = ({item}: {item: MovieType}) => {
             </Text>
           </VStack>
         </Row>
-      </Box>
+      </Pressable>
     </>
   );
 };

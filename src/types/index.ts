@@ -1,8 +1,9 @@
 export type {
   PublicStackParams,
   PublicNavigationProps,
-  RootRouteProps,
+  PrivateNavigationProps,
   PrivateStackParams,
+  RootRouteProps,
   PrivateRootRouteProps,
 } from './allRoutes';
 interface PatronDetails {

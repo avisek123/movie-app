@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     title: 'Action',
-    img: 'https://plus.unsplash.com/premium_photo-1661962722112-e82d79f02109?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWN0aW9uJTIwbW92aWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
+    img: 'https://plus.unsplash.com/premium_photo-1683134559962-1f316af881d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWN0aW9uJTIwZ3VufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
   },
   {
     id: 2,

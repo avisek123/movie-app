@@ -12,13 +12,13 @@ const PrivateRoutes = () => {
         headerShown: false,
       }}>
       <Stack.Screen name="BottomTabs" component={BottomTabs} />
-      {/* <Stack.Screen
+      <Stack.Screen
         options={{
           headerShown: false,
         }}
-        name="Home"
-        component={Private.Home}
-      /> */}
+        name="MovieDetails"
+        component={Private.MovieDetails}
+      />
     </Stack.Navigator>
   );
 };

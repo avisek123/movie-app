@@ -8,12 +8,15 @@ export type PublicStackParams = {
 export type PrivateStackParams = {
   BottomTabs: undefined;
   Home: undefined;
+  MovieDetails: {
+    imdbID: string;
+  };
 };
 export type BottomTabsTypes = {
   Home: undefined;
-  Jobs: undefined;
+
   Account: undefined;
-  Geners: undefined;
+
   Notification: undefined;
   Discover: undefined;
 };
@@ -22,9 +25,7 @@ export type PublicNavigationProps =
   NativeStackNavigationProp<PublicStackParams>;
 export type PrivateNavigationProps =
   NativeStackNavigationProp<PrivateStackParams>;
-
 export type RootRouteProps<RouteName extends keyof PublicStackParams> =
   RouteProp<PublicStackParams, RouteName>;
-
 export type PrivateRootRouteProps<RouteName extends keyof PrivateStackParams> =
   RouteProp<PrivateStackParams, RouteName>;
